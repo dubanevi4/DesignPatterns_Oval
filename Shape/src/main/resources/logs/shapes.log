@@ -1,0 +1,7 @@
+2025-05-02 15:06:02.489 [main] INFO  com.shapes.reader.FileReader - Reading shapes from file: D:\InteliJ_workspace\Java_lab_master\Year2_semester2\Shape\Shape\src\main\resources\shapes.txt
+2025-05-02 15:06:02.526 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 1
+2025-05-02 15:06:02.526 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 2
+2025-05-02 15:06:02.526 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 3
+2025-05-02 15:06:02.534 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 4
+2025-05-02 15:06:02.534 [main] WARN  com.shapes.reader.FileReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
+2025-05-02 15:06:02.534 [main] INFO  com.shapes.Main - Shapes processing completed successfully
