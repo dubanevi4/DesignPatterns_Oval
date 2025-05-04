@@ -1,3 +1,8 @@
-2025-05-04 12:47:12.799 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\user\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
+2025-05-04 14:29:28.017 [main] INFO  com.shapes.reader.FileReader - Reading shapes from file: D:\InteliJ_workspace\Java_lab_master\Year2_semester2\Shape\Shape\src\main\resources\shapes.txt
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 1
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 2
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 3
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 4
+2025-05-04 14:29:28.044 [main] WARN  com.shapes.reader.FileReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.repository.ShapeRepository - Saved shape with id: 5
+2025-05-04 14:29:28.044 [main] INFO  com.shapes.Main - Shapes processing completed successfully
