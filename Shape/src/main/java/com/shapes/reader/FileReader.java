@@ -2,6 +2,7 @@ package com.shapes.reader;
 
 import com.shapes.entity.Shape;
 import com.shapes.entity.Point;
+import com.shapes.exception.OvalProjectException;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
 import com.shapes.validator.impl.InputStringValidator;
@@ -45,7 +46,7 @@ public class FileReader {
             long id = repository.save(oval);
             logger.debug("Created oval with id: {}", id);
 
-        } catch (Exception e) {
+        } catch (OvalProjectException e) {
             logger.error("Error processing line: {} - {}", line, e.getMessage());
         }
     }
