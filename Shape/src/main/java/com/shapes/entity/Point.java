@@ -1,4 +1,4 @@
-package com.shapes;
+package com.shapes.entity;
 
 import java.util.Objects;
 

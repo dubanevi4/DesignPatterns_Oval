@@ -1,4 +1,4 @@
-package com.shapes;
+package com.shapes.entity;
 
 public class Oval extends Shape {
     private final Point point1;

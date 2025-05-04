@@ -1,8 +1,8 @@
 package com.shapes.services.impl;
 
-import com.shapes.Oval;
-import com.shapes.Point;
-import com.shapes.Shape;
+import com.shapes.entity.Oval;
+import com.shapes.entity.Point;
+import com.shapes.entity.Shape;
 import com.shapes.services.AreaCalculator;
 
 public class OvalAreaCalculator implements AreaCalculator {

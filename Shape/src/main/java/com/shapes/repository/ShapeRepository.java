@@ -1,6 +1,6 @@
 package com.shapes.repository;
 
-import com.shapes.Shape;
+import com.shapes.entity.Shape;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,7 +1,7 @@
 package com.shapes.reader;
 
-import com.shapes.Shape;
-import com.shapes.Point;
+import com.shapes.entity.Shape;
+import com.shapes.entity.Point;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
 import com.shapes.validator.InputStringValidator;
