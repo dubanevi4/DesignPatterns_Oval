@@ -1,7 +1,8 @@
-package com.shapes.validator;
+package com.shapes.validator.impl;
 
 import com.shapes.entity.Oval;
 import com.shapes.entity.Point;
+import com.shapes.validator.Validator;
 
 public class OvalValidator implements Validator<Oval> {
 

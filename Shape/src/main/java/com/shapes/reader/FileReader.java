@@ -4,8 +4,8 @@ import com.shapes.entity.Shape;
 import com.shapes.entity.Point;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
-import com.shapes.validator.InputStringValidator;
-import com.shapes.validator.ValidationResult;
+import com.shapes.validator.impl.InputStringValidator;
+import com.shapes.validator.impl.ValidationResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,10 +1,11 @@
-package com.shapes.validator;
+package com.shapes.validator.impl;
 
 import com.shapes.exception.OvalProjectException;
+import com.shapes.validator.Validator;
 
 import java.util.regex.Pattern;
 
-public class InputStringValidator implements Validator<String>{
+public class InputStringValidator implements Validator<String> {
     // Expected pattern: Oval: «1.9; 2.1; 3.2; 4.5»;
     private static final Pattern OVAL_PATTERN = Pattern.compile(
             "^Oval:\\s*«\\s*([+-]?\\d*\\.?\\d+)\\s*;\\s*([+-]?\\d*\\.?\\d+)\\s*;\\s*([+-]?\\d*\\.?\\d+)\\s*;\\s*([+-]?\\d*\\.?\\d+)\\s*»\\s*;$",

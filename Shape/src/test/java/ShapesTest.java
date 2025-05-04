@@ -1,10 +1,9 @@
-import com.shapes.entity.Oval;
 import com.shapes.entity.Point;
 import com.shapes.entity.Shape;
 import com.shapes.exception.OvalProjectException;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
-import com.shapes.validator.InputStringValidator;
+import com.shapes.validator.impl.InputStringValidator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.testng.annotations.AfterMethod;

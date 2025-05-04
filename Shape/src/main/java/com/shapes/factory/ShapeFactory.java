@@ -4,8 +4,8 @@ import com.shapes.entity.Oval;
 import com.shapes.entity.Point;
 import com.shapes.entity.Shape;
 import com.shapes.exception.OvalProjectException;
-import com.shapes.validator.OvalValidator;
-import com.shapes.validator.ValidationResult;
+import com.shapes.validator.impl.OvalValidator;
+import com.shapes.validator.impl.ValidationResult;
 import com.shapes.validator.Validator;
 
 public class ShapeFactory {
