@@ -1,5 +1,7 @@
+import com.shapes.entity.Oval;
 import com.shapes.entity.Point;
 import com.shapes.entity.Shape;
+import com.shapes.exception.OvalProjectException;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
 import com.shapes.validator.InputStringValidator;
@@ -45,7 +47,7 @@ public class ShapesTest {
     }
 
     @Test(dataProvider = "validOvalStrings")
-    public void testValidOvalCreation(String input) {
+    public void testValidOvalCreation(String input) throws OvalProjectException {
         double[] coords = InputStringValidator.parseOvalCoordinates(input);
         Shape oval = ShapeFactory.createShape(
                 ShapeFactory.ShapeType.OVAL,
@@ -60,8 +62,8 @@ public class ShapesTest {
         assertEquals(retrieved, oval);
     }
 
-    @Test(dataProvider = "invalidOvalStrings", expectedExceptions = IllegalArgumentException.class)
-    public void testInvalidOvalCreation(String input) {
+    @Test(dataProvider = "invalidOvalStrings", expectedExceptions = OvalProjectException.class)
+    public void testInvalidOvalCreation(String input) throws OvalProjectException {
         InputStringValidator.parseOvalCoordinates(input);
     }
 
