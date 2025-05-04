@@ -1,25 +1,28 @@
+import com.shapes.entity.Oval;
 import com.shapes.entity.Point;
 import com.shapes.entity.Shape;
 import com.shapes.exception.OvalProjectException;
 import com.shapes.factory.ShapeFactory;
 import com.shapes.repository.ShapeRepository;
+import com.shapes.validator.Validator;
+import com.shapes.validator.impl.OvalValidator;
+import com.shapes.util.OvalUtils;
 import com.shapes.validator.impl.InputStringValidator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.config.Configurator;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
 public class ShapesTest {
     private ShapeRepository repository;
+    private Validator<Oval> ovalValidator;
 
     @BeforeMethod
     public void setUp() {
         Configurator.setRootLevel(Level.OFF); // Отключаем логи для тестов
         repository = ShapeRepository.getInstance();
+        ovalValidator = new OvalValidator(); // Инициализируем валидатор
     }
 
     @AfterMethod
@@ -40,19 +43,21 @@ public class ShapesTest {
     public Object[][] invalidOvalStrings() {
         return new Object[][] {
                 {"Oval: «1.0; 2.0; 3.0»;"}, // Не хватает значения
-                {"Oval: «a; b; c; d»;"},     // Нечисловые значения
-                {"Invalid format"}            // Неверный формат
+                {"Oval: «a; b; c; d»;"},    // Нечисловые значения
+                {"Invalid format"}          // Неверный формат
         };
     }
 
     @Test(dataProvider = "validOvalStrings")
     public void testValidOvalCreation(String input) throws OvalProjectException {
         double[] coords = InputStringValidator.parseOvalCoordinates(input);
-        Shape oval = ShapeFactory.createShape(
+        Oval oval = (Oval) ShapeFactory.createShape(
                 ShapeFactory.ShapeType.OVAL,
                 new Point(coords[0], coords[1]),
                 new Point(coords[2], coords[3])
         );
+
+        assertTrue(ovalValidator.validate(oval).isValid()); // Проверяем валидность овала
 
         long id = repository.save(oval);
         Shape retrieved = repository.getById(id);
@@ -64,6 +69,13 @@ public class ShapesTest {
     @Test(dataProvider = "invalidOvalStrings", expectedExceptions = OvalProjectException.class)
     public void testInvalidOvalCreation(String input) throws OvalProjectException {
         InputStringValidator.parseOvalCoordinates(input);
+    }
+
+    @Test
+    public void testInvalidOvalValidation() {
+        Oval invalidOval = new Oval(new Point(3.0, 3.0), new Point(3.0, 3.0)); // Точки совпадают
+
+        assertFalse(ovalValidator.validate(invalidOval).isValid());
     }
 
     @Test

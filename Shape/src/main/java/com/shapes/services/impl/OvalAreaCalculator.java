@@ -1,10 +1,10 @@
 package com.shapes.services.impl;
 
 import com.shapes.entity.Oval;
-import com.shapes.entity.Point;
 import com.shapes.entity.Shape;
 import com.shapes.exception.OvalProjectException;
 import com.shapes.services.AreaCalculator;
+import com.shapes.util.OvalUtils;
 
 public class OvalAreaCalculator implements AreaCalculator {
 
