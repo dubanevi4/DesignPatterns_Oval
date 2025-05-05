@@ -1,9 +1,9 @@
-package com.shapes.validator.impl;
+package lt.esdc.shapes.validator.impl;
 
-import com.shapes.entity.Oval;
-import com.shapes.entity.Point;
-import com.shapes.util.OvalUtils;
-import com.shapes.validator.Validator;
+import lt.esdc.shapes.entity.Oval;
+import lt.esdc.shapes.entity.Point;
+import lt.esdc.shapes.util.OvalUtils;
+import lt.esdc.shapes.validator.Validator;
 
 public class OvalValidator implements Validator<Oval> {
 

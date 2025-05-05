@@ -1,4 +1,4 @@
-package com.shapes.validator.impl;
+package lt.esdc.shapes.validator.impl;
 
 public class ValidationResult {
     private final boolean isValid;

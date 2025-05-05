@@ -1,9 +1,9 @@
-package com.shapes.services.impl;
-import com.shapes.entity.Oval;
-import com.shapes.entity.Shape;
-import com.shapes.exception.OvalProjectException;
-import com.shapes.services.PerimeterCalculator;
-import com.shapes.util.OvalUtils;
+package lt.esdc.shapes.services.impl;
+import lt.esdc.shapes.entity.Oval;
+import lt.esdc.shapes.entity.Shape;
+import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.services.PerimeterCalculator;
+import lt.esdc.shapes.util.OvalUtils;
 
 public class OvalPerimeterCalculator implements PerimeterCalculator {
 

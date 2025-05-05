@@ -1,4 +1,4 @@
-package com.shapes.entity;
+package lt.esdc.shapes.entity;
 
 import java.util.Objects;
 

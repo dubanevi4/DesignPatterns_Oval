@@ -1,7 +1,7 @@
-package com.shapes.validator.impl;
+package lt.esdc.shapes.validator.impl;
 
-import com.shapes.exception.OvalProjectException;
-import com.shapes.validator.Validator;
+import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.validator.Validator;
 
 import java.util.regex.Pattern;
 

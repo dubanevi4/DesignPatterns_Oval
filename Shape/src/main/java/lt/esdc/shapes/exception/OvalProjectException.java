@@ -1,4 +1,4 @@
-package com.shapes.exception;
+package lt.esdc.shapes.exception;
 
 public class OvalProjectException extends Exception{
     // Without parameters

@@ -1,12 +1,12 @@
-package com.shapes.reader;
+package lt.esdc.shapes.reader;
 
-import com.shapes.entity.Shape;
-import com.shapes.entity.Point;
-import com.shapes.exception.OvalProjectException;
-import com.shapes.factory.ShapeFactory;
-import com.shapes.repository.ShapeRepository;
-import com.shapes.validator.impl.InputStringValidator;
-import com.shapes.validator.impl.ValidationResult;
+import lt.esdc.shapes.entity.Shape;
+import lt.esdc.shapes.entity.Point;
+import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.factory.ShapeFactory;
+import lt.esdc.shapes.repository.ShapeRepository;
+import lt.esdc.shapes.validator.impl.InputStringValidator;
+import lt.esdc.shapes.validator.impl.ValidationResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

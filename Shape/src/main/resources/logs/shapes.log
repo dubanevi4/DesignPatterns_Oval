@@ -1,3 +1,9 @@
-2025-05-04 15:36:25.347 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\user\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
+2025-05-05 19:59:39.570 [main] INFO  lt.esdc.shapes.reader.FileReader - Reading shapes from file: D:\InteliJ_workspace\Java_lab_master\Year2_semester2\Shape\Shape\src\main\resources\shapes.txt
+2025-05-05 19:59:39.603 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 1
+2025-05-05 19:59:39.603 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 2
+2025-05-05 19:59:39.604 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 3
+2025-05-05 19:59:39.604 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 4
+2025-05-05 19:59:39.604 [main] WARN  lt.esdc.shapes.reader.FileReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
+2025-05-05 19:59:39.604 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 5
+2025-05-05 19:59:39.605 [main] ERROR lt.esdc.shapes.reader.FileReader - Error processing line: Oval: «1.0; 1.0; 1.0; 1.0»; - Points must not be identical
+2025-05-05 19:59:39.605 [main] INFO  lt.esdc.shapes.Main - Shapes processing completed successfully

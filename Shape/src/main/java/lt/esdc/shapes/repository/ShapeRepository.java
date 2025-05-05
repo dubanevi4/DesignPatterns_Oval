@@ -1,6 +1,6 @@
-package com.shapes.repository;
+package lt.esdc.shapes.repository;
 
-import com.shapes.entity.Shape;
+import lt.esdc.shapes.entity.Shape;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

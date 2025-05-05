@@ -1,4 +1,4 @@
-package com.shapes.entity;
+package lt.esdc.shapes.entity;
 
 public class Oval extends Shape {
     private final Point point1;

@@ -1,6 +1,6 @@
-package com.shapes.util;
+package lt.esdc.shapes.util;
 
-import com.shapes.entity.Point;
+import lt.esdc.shapes.entity.Point;
 
 public class OvalUtils {
 

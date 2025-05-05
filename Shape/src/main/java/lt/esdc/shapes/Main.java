@@ -1,6 +1,6 @@
-package com.shapes;
+package lt.esdc.shapes;
 
-import com.shapes.reader.FileReader;
+import lt.esdc.shapes.reader.FileReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

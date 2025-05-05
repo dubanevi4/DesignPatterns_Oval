@@ -1,10 +1,10 @@
-package com.shapes.services.impl;
+package lt.esdc.shapes.services.impl;
 
-import com.shapes.entity.Oval;
-import com.shapes.entity.Shape;
-import com.shapes.exception.OvalProjectException;
-import com.shapes.services.AreaCalculator;
-import com.shapes.util.OvalUtils;
+import lt.esdc.shapes.entity.Oval;
+import lt.esdc.shapes.entity.Shape;
+import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.services.AreaCalculator;
+import lt.esdc.shapes.util.OvalUtils;
 
 public class OvalAreaCalculator implements AreaCalculator {
 

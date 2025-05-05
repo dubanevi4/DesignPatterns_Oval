@@ -1,12 +1,12 @@
-package com.shapes.factory;
+package lt.esdc.shapes.factory;
 
-import com.shapes.entity.Oval;
-import com.shapes.entity.Point;
-import com.shapes.entity.Shape;
-import com.shapes.exception.OvalProjectException;
-import com.shapes.validator.impl.OvalValidator;
-import com.shapes.validator.impl.ValidationResult;
-import com.shapes.validator.Validator;
+import lt.esdc.shapes.entity.Oval;
+import lt.esdc.shapes.entity.Point;
+import lt.esdc.shapes.entity.Shape;
+import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.validator.impl.OvalValidator;
+import lt.esdc.shapes.validator.impl.ValidationResult;
+import lt.esdc.shapes.validator.Validator;
 
 public class ShapeFactory {
     public enum ShapeType {
