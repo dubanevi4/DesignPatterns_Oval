@@ -56,31 +56,29 @@ public class ShapesTest {
                 new Point(coords[2], coords[3])
         );
 
-        assertTrue(ovalValidator.validate(oval).isValid()); // Проверяем валидность овала
+        assertTrue(ovalValidator.validate(oval).isValid(), "Овал должен быть валидным");
 
-        long id = repository.save(oval);
-        Shape retrieved = repository.getById(id);
+        repository.save(oval);
+        Shape retrieved = repository.getById(oval.getID());
 
-        assertNotNull(retrieved);
-        assertEquals(retrieved, oval);
+        assertNotNull(retrieved, "Фигура должна существовать в репозитории");
+        assertEquals(retrieved, oval, "Фигура в репозитории должна совпадать с исходной");
     }
 
-    @Test(dataProvider = "invalidOvalStrings", expectedExceptions = OvalProjectException.class)
-    public void testInvalidOvalCreation(String input) throws OvalProjectException {
-        InputStringValidator.parseOvalCoordinates(input);
+    @Test(dataProvider = "invalidOvalStrings")
+    public void testInvalidOvalCreation(String input) {
+        assertThrows(OvalProjectException.class, () -> InputStringValidator.parseOvalCoordinates(input));
     }
 
     @Test
     public void testInvalidOvalValidation() {
         Oval invalidOval = new Oval(new Point(3.0, 3.0), new Point(3.0, 3.0)); // Точки совпадают
 
-        assertFalse(ovalValidator.validate(invalidOval).isValid());
+        assertFalse(ovalValidator.validate(invalidOval).isValid(), "Овал с одинаковыми точками должен быть невалидным");
     }
 
     @Test
     public void testRepositorySingleton() {
-        ShapeRepository instance1 = ShapeRepository.getInstance();
-        ShapeRepository instance2 = ShapeRepository.getInstance();
-        assertSame(instance1, instance2);
+        assertSame(ShapeRepository.getInstance(), ShapeRepository.getInstance(), "Репозиторий должен быть Singleton");
     }
 }

@@ -4,8 +4,11 @@ import lt.esdc.shapes.entity.Shape;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class ShapeRepository {
     private static final Logger logger = LogManager.getLogger(ShapeRepository.class);
@@ -31,8 +34,24 @@ public class ShapeRepository {
         return shape;
     }
 
-    public void clear() {
-        storage.clear();
-        logger.info("Repository cleared");
+    // Sort by Area
+    public List<Shape> sortByArea() {
+        return storage.values().stream()
+                .sorted(Comparator.comparingDouble(Shape::calculateArea))
+                .collect(Collectors.toList());
+    }
+
+    // Sort by Perimeter
+    public List<Shape> sortByPerimeter() {
+        return storage.values().stream()
+                .sorted(Comparator.comparingDouble(Shape::calculatePerimeter))
+                .collect(Collectors.toList());
+    }
+
+    // Sort by ID
+    public List<Shape> sortById() {
+        return storage.values().stream()
+                .sorted(Comparator.comparingLong(Shape::getID))
+                .collect(Collectors.toList());
     }
 }
