@@ -24,11 +24,6 @@ public class ShapesTest {
         ovalValidator = new OvalValidator(); // Инициализируем валидатор
     }
 
-    @AfterMethod
-    public void tearDown() {
-        repository.clear();
-    }
-
     @DataProvider
     public Object[][] validOvalStrings() {
         return new Object[][] {
