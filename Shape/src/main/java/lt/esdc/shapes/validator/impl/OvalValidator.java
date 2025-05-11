@@ -2,7 +2,7 @@ package lt.esdc.shapes.validator.impl;
 
 import lt.esdc.shapes.entity.Oval;
 import lt.esdc.shapes.entity.Point;
-import lt.esdc.shapes.util.OvalUtils;
+import lt.esdc.shapes.services.impl.OvalAxisCalculator;
 import lt.esdc.shapes.validator.Validator;
 
 public class OvalValidator implements Validator<Oval> {
@@ -22,8 +22,8 @@ public class OvalValidator implements Validator<Oval> {
             return ValidationResult.invalid("Points must not be aligned vertically or horizontally");
         }
 
-        double a = OvalUtils.getSemiMajorAxis(p1, p2);
-        double b = OvalUtils.getSemiMajorAxis(p1, p2);
+        double a = OvalAxisCalculator.getSemiMajorAxis(p1, p2);
+        double b = OvalAxisCalculator.getSemiMajorAxis(p1, p2);
 
 
         // 3. Проверка допустимых значений координат

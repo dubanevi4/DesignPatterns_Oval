@@ -1,10 +1,14 @@
 package lt.esdc.shapes.entity;
 
+import lt.esdc.shapes.services.impl.OvalAreaCalculator;
+import lt.esdc.shapes.services.impl.OvalPerimeterCalculator;
+
 public class Oval extends Shape {
-    private final Point point1;
-    private final Point point2;
+    private Point point1;
+    private Point point2;
 
     public Oval(Point point1, Point point2){
+        super(-1); //Set ID to -1 before validation
         if (point1 == null || point2 == null) {
             throw new IllegalArgumentException("Points cannot be null");
         }
@@ -21,8 +25,18 @@ public class Oval extends Shape {
     }
 
     @Override
+    public double calculateArea() {
+        return new OvalAreaCalculator().calculateArea(this);
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return new OvalPerimeterCalculator().calculatePerimeter(this);
+    }
+
+    @Override
     public String toString() {
-        return String.format("Oval[(%.2f,%.2f)-(%.2f,%.2f)]",
-                point1.getX(), point1.getY(), point2.getX(), point2.getY());
+        return String.format("Oval[%d: (%.2f,%.2f)-(%.2f,%.2f)]",
+                getID(), point1.getX(), point1.getY(), point2.getX(), point2.getY());
     }
 }

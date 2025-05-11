@@ -4,14 +4,13 @@ import lt.esdc.shapes.entity.Shape;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ShapeRepository {
     private static final Logger logger = LogManager.getLogger(ShapeRepository.class);
     private static final ShapeRepository INSTANCE = new ShapeRepository();
-    private final ConcurrentHashMap<Long, Shape> storage = new ConcurrentHashMap<>();
-    private final AtomicLong idGenerator = new AtomicLong(1);
+    private final Map<Long, Shape> storage = new HashMap<>();
 
     private ShapeRepository() {}
 
@@ -19,11 +18,9 @@ public class ShapeRepository {
         return INSTANCE;
     }
 
-    public long save(Shape shape) {
-        long id = idGenerator.getAndIncrement();
-        storage.put(id, shape);
-        logger.info("Saved shape with id: {}", id);
-        return id;
+    public void save(Shape shape) {
+        storage.put(shape.getID(), shape);
+        logger.info("Saved shape with id: {}", shape.getID());
     }
 
     public Shape getById(long id) {

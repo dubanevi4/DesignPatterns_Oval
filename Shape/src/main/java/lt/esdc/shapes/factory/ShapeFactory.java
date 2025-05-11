@@ -4,6 +4,7 @@ import lt.esdc.shapes.entity.Oval;
 import lt.esdc.shapes.entity.Point;
 import lt.esdc.shapes.entity.Shape;
 import lt.esdc.shapes.exception.OvalProjectException;
+import lt.esdc.shapes.util.IDGenerator;
 import lt.esdc.shapes.validator.impl.OvalValidator;
 import lt.esdc.shapes.validator.impl.ValidationResult;
 import lt.esdc.shapes.validator.Validator;
@@ -23,6 +24,8 @@ public class ShapeFactory {
                 if (!validation.isValid()) {
                     throw new OvalProjectException(validation.getErrorMessage());
                 }
+                long id = IDGenerator.generateId();
+                oval.setID(id);
                 return oval;
             default:
                 throw new OvalProjectException("Illegal shape type :" + type);
