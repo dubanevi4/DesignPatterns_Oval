@@ -1,3 +1,15 @@
-2025-05-11 23:20:34.847 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\user\AppData\Local\JetBrains\IdeaIC2024.2\temp-testng-customsuite.xml
-
+2025-05-12 18:43:27.815 [main] INFO  lt.esdc.shapes.reader.InputDataReader - Reading shapes from file: shapes.txt
+2025-05-12 18:43:27.839 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 1
+2025-05-12 18:43:27.845 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 1: Area = 23.561944901923447, Perimeter = 21.92836690727493
+2025-05-12 18:43:27.845 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 2
+2025-05-12 18:43:27.845 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 2: Area = 37.69911184307752, Perimeter = 22.103491790916742
+2025-05-12 18:43:27.848 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 3
+2025-05-12 18:43:27.848 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 3: Area = 109.95574287564276, Perimeter = 37.96136732875541
+2025-05-12 18:43:27.848 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 4
+2025-05-12 18:43:27.848 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 4: Area = 5.890486225480862, Perimeter = 8.657238985187856
+2025-05-12 18:43:27.848 [main] WARN  lt.esdc.shapes.reader.InputDataReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
+2025-05-12 18:43:27.850 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 5
+2025-05-12 18:43:27.850 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 5: Area = 8.246680715673207, Perimeter = 10.694410612718926
+2025-05-12 18:43:27.850 [main] ERROR lt.esdc.shapes.reader.InputDataReader - Error processing line: Oval: «1.0; 1.0; 1.0; 1.0»; - Points must not be identical
+2025-05-12 18:43:27.852 [main] INFO  lt.esdc.shapes.ShapeApp - Shapes processing completed successfully
+2025-05-12 18:43:27.852 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 1: Area = 21.205750411731103, Perimeter = 20.04665968085377

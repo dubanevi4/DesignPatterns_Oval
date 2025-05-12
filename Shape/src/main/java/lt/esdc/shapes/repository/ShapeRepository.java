@@ -1,6 +1,7 @@
 package lt.esdc.shapes.repository;
 
 import lt.esdc.shapes.entity.Shape;
+import lt.esdc.shapes.observer.WarehouseUpdater;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,6 +15,7 @@ public class ShapeRepository {
     private static final Logger logger = LogManager.getLogger(ShapeRepository.class);
     private static final ShapeRepository INSTANCE = new ShapeRepository();
     private final Map<Long, Shape> storage = new HashMap<>();
+    private final WarehouseUpdater observer = new WarehouseUpdater();
 
     private ShapeRepository() {}
 
@@ -22,6 +24,7 @@ public class ShapeRepository {
     }
 
     public void save(Shape shape) {
+        shape.setObserver(observer);
         storage.put(shape.getID(), shape);
         logger.info("Saved shape with id: {}", shape.getID());
     }

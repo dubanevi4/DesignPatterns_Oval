@@ -24,6 +24,16 @@ public class Oval extends Shape {
         return point2;
     }
 
+    public void setPoint1(Point p1) {
+        this.point1 = p1;
+        notifyObserver();
+    }
+
+    public void setPoint2(Point p2) {
+        this.point2 = p2;
+        notifyObserver();
+    }
+
     @Override
     public double calculateArea() {
         return new OvalAreaCalculator().calculateArea(this);
