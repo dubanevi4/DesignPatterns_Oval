@@ -11,7 +11,7 @@ public class PerimeterSpecification extends Specification<Shape> {
     }
 
     @Override
-    public boolean isSatisfiedBy(Shape shape) {
+    public boolean isSatisfied(Shape shape) {
         return shape.calculatePerimeter() <= maxPerimeter;
     }
 }

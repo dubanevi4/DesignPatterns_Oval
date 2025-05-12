@@ -13,7 +13,7 @@ public class OrSpecification<T extends Shape> extends Specification<T> {
     }
 
     @Override
-    public boolean isSatisfiedBy(T item) {
-        return spec1.isSatisfiedBy(item) || spec2.isSatisfiedBy(item);
+    public boolean isSatisfied(T item) {
+        return spec1.isSatisfied(item) || spec2.isSatisfied(item);
     }
 }

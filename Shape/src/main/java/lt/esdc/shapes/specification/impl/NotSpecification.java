@@ -11,7 +11,7 @@ public class NotSpecification<T extends Shape> extends Specification<T> {
     }
 
     @Override
-    public boolean isSatisfiedBy(T item) {
-        return !spec.isSatisfiedBy(item);
+    public boolean isSatisfied(T item) {
+        return !spec.isSatisfied(item);
     }
 }
