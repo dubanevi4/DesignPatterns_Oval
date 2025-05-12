@@ -1,4 +1,4 @@
-package lt.esdc.shapes.services.impl;
+package lt.esdc.shapes.service.impl;
 
 import lt.esdc.shapes.entity.Point;
 

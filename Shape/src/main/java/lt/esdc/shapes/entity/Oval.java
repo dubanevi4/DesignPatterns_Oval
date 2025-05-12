@@ -1,7 +1,7 @@
 package lt.esdc.shapes.entity;
 
-import lt.esdc.shapes.services.impl.OvalAreaCalculator;
-import lt.esdc.shapes.services.impl.OvalPerimeterCalculator;
+import lt.esdc.shapes.service.impl.OvalAreaCalculator;
+import lt.esdc.shapes.service.impl.OvalPerimeterCalculator;
 
 public class Oval extends Shape {
     private Point point1;

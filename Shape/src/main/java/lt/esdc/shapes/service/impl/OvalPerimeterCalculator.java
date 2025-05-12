@@ -1,6 +1,6 @@
-package lt.esdc.shapes.services.impl;
+package lt.esdc.shapes.service.impl;
 import lt.esdc.shapes.entity.Oval;
-import lt.esdc.shapes.services.PerimeterCalculator;
+import lt.esdc.shapes.service.PerimeterCalculator;
 
 public class OvalPerimeterCalculator implements PerimeterCalculator<Oval> {
 

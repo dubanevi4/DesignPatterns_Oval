@@ -2,7 +2,7 @@ package lt.esdc.shapes.validator.impl;
 
 import lt.esdc.shapes.entity.Oval;
 import lt.esdc.shapes.entity.Point;
-import lt.esdc.shapes.services.impl.OvalAxisCalculator;
+import lt.esdc.shapes.service.impl.OvalAxisCalculator;
 import lt.esdc.shapes.validator.Validator;
 
 public class OvalValidator implements Validator<Oval> {
