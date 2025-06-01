@@ -1,15 +1,43 @@
-2025-05-12 23:22:22.728 [main] INFO  lt.esdc.shapes.reader.InputDataReader - Reading shapes from file: shapes.txt
-2025-05-12 23:22:22.754 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 1
-2025-05-12 23:22:22.762 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 1: Area = 23.561944901923447, Perimeter = 21.92836690727493
-2025-05-12 23:22:22.762 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 2
-2025-05-12 23:22:22.762 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 2: Area = 37.69911184307752, Perimeter = 22.103491790916742
-2025-05-12 23:22:22.762 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 3
-2025-05-12 23:22:22.764 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 3: Area = 109.95574287564276, Perimeter = 37.96136732875541
-2025-05-12 23:22:22.764 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 4
-2025-05-12 23:22:22.764 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 4: Area = 5.890486225480862, Perimeter = 8.657238985187856
-2025-05-12 23:22:22.764 [main] WARN  lt.esdc.shapes.reader.InputDataReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
-2025-05-12 23:22:22.764 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 5
-2025-05-12 23:22:22.764 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 5: Area = 8.246680715673207, Perimeter = 10.694410612718926
-2025-05-12 23:22:22.766 [main] ERROR lt.esdc.shapes.reader.InputDataReader - Error processing line: Oval: «1.0; 1.0; 1.0; 1.0»; - Points must not be identical
-2025-05-12 23:22:22.766 [main] INFO  lt.esdc.shapes.main.Main - Shapes processing completed successfully
-2025-05-12 23:22:22.767 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 1: Area = 21.205750411731103, Perimeter = 20.04665968085377
+2025-06-01 19:18:22.150 [main] INFO  lt.esdc.shapes.reader.InputDataReader - Reading shapes from file: shapes.txt
+2025-06-01 19:18:22.164 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 1
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 1: Area = 23.561944901923447, Perimeter = 21.92836690727493
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 2
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 2: Area = 37.69911184307752, Perimeter = 22.103491790916742
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 3
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 3: Area = 109.95574287564276, Perimeter = 37.96136732875541
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 4
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 4: Area = 5.890486225480862, Perimeter = 8.657238985187856
+2025-06-01 19:18:22.171 [main] WARN  lt.esdc.shapes.reader.InputDataReader - Validation failed: Invalid oval format. Expected: Oval: «x1; y1; x2; y2»;
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.repository.ShapeRepository - Saved shape with id: 5
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.storage.Warehouse - Updated shape ID 5: Area = 8.246680715673207, Perimeter = 10.694410612718926
+2025-06-01 19:18:22.171 [main] ERROR lt.esdc.shapes.reader.InputDataReader - Error processing line: Oval: «1.0; 1.0; 1.0; 1.0»; - Points must not be identical
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.main.Main - Shapes loaded successfully
+2025-06-01 19:18:22.171 [main] INFO  lt.esdc.shapes.main.Main - Shapes sorted by area:
+2025-06-01 19:18:22.177 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 4, Area: 5,89
+2025-06-01 19:18:22.177 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 5, Area: 8,25
+2025-06-01 19:18:22.179 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 1, Area: 23,56
+2025-06-01 19:18:22.179 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 2, Area: 37,70
+2025-06-01 19:18:22.179 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 3, Area: 109,96
+2025-06-01 19:18:22.179 [main] INFO  lt.esdc.shapes.main.Main - 
+Shapes with area greater than 50:
+2025-06-01 19:18:22.180 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 3, Area: 109,96
+2025-06-01 19:18:22.180 [main] INFO  lt.esdc.shapes.main.Main - 
+Shapes with perimeter between 20 and 30:
+2025-06-01 19:18:22.180 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 1, Perimeter: 21,93
+2025-06-01 19:18:22.185 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 2, Perimeter: 22,10
+2025-06-01 19:18:22.185 [main] INFO  lt.esdc.shapes.main.Main - 
+Large shapes (area > 40) sorted by perimeter:
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 3, Area: 109,96, Perimeter: 37,96
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - 
+Shapes sorted by ID:
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 1, Area: 23,56, Perimeter: 21,93
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 2, Area: 37,70, Perimeter: 22,10
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 3, Area: 109,96, Perimeter: 37,96
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 4, Area: 5,89, Perimeter: 8,66
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 5, Area: 8,25, Perimeter: 10,69
+2025-06-01 19:18:22.186 [main] INFO  lt.esdc.shapes.main.Main - 
+Finding shapes with similar areas (tolerance: 0.1):
+2025-06-01 19:18:22.189 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 4, Area difference: 17,67
+2025-06-01 19:18:22.189 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 5, Area difference: 15,32
+2025-06-01 19:18:22.189 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 2, Area difference: 14,14
+2025-06-01 19:18:22.189 [main] INFO  lt.esdc.shapes.main.Main - Shape ID: 3, Area difference: 86,39
